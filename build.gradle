@@ -8,6 +8,19 @@ plugins {
 group 'run.halo.comment.widget'
 sourceCompatibility = JavaVersion.VERSION_17
 
+allprojects {
+  repositories {
+    maven {
+      url 'https://maven.aliyun.com/repository/public/'
+    }
+    maven {
+      url 'https://maven.aliyun.com/repository/central'
+    }
+    mavenLocal()
+    mavenCentral()
+  }
+}
+
 repositories {
     mavenCentral()
     maven { url 'https://s01.oss.sonatype.org/content/repositories/releases' }

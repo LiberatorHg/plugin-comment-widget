@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import './base-form';
 import { CommentVo, Reply, ReplyRequest, ReplyVo, User } from '@halo-dev/api-client';
 import { LitElement, html } from 'lit';
@@ -74,8 +75,8 @@ export class ReplyForm extends LitElement {
     }
 
     if (!this.currentUser && this.allowAnonymousComments) {
-      if (!displayName || !email) {
-        this.toastManager?.warn('请先登录或者完善信息');
+      if (!displayName) {
+        this.toastManager?.warn('请填写昵称喵~');
         return;
       } else {
         replyRequest.owner = {

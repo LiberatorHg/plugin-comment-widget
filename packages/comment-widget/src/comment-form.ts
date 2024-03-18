@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { LitElement, html } from 'lit';
 import { state } from 'lit/decorators.js';
 import { consume } from '@lit/context';
@@ -82,8 +83,8 @@ export class CommentForm extends LitElement {
     }
 
     if (!this.currentUser && this.allowAnonymousComments) {
-      if (!displayName || !email) {
-        this.toastManager?.warn('请先登录或者完善信息');
+      if (!displayName) {
+        this.toastManager?.warn('请填写昵称喵~');
         return;
       } else {
         commentRequest.owner = {

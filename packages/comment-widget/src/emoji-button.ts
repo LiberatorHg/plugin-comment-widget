@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import './icons/icon-loading';
 import './icons/icon-emoji';
 import { LitElement, css, html } from 'lit';
@@ -130,6 +131,7 @@ export class EmojiButton extends LitElement {
         border-radius: 0.875em;
         overflow: hidden;
         animation: fadeInUp 0.3s both;
+        z-index: 1;
       }
 
       @media (max-width: 640px) {

@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import './emoji-button';
 import { LitElement, css, html } from 'lit';
 import { Ref, createRef, ref } from 'lit/directives/ref.js';
@@ -133,7 +134,7 @@ export class BaseForm extends LitElement {
         <textarea
           class="form__editor"
           ${ref(this.textareaRef)}
-          placeholder="编写评论"
+          placeholder="如果在查看时发现问题或者有其他建议，欢迎各位留言交流٩(๑•̀ω•́๑)۶"
           rows="4"
           name="content"
           required
@@ -146,23 +147,16 @@ export class BaseForm extends LitElement {
                 name="displayName"
                 value=${this.customAccount.displayName}
                 type="text"
-                placeholder="昵称"
+                placeholder="昵称(必填)"
                 required
               />
               <input
                 name="email"
                 value=${this.customAccount.email}
-                type="email"
-                placeholder="电子邮件"
-                required
+                type="text"
+                placeholder="联系方式(选填)"
               />
-              <input
-                name="website"
-                value=${this.customAccount.website}
-                type="url"
-                placeholder="网站"
-              />
-              <a href=${this.loginUrl} rel="nofollow"> （已有该站点的账号） </a>
+              <a href=${this.loginUrl} rel="nofollow"> （管理员请登录喵~） </a>
             </div>`
           : ''}
 
